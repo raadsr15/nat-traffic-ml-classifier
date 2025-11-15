@@ -26,7 +26,7 @@ The dataset provides a structured foundation for research in **traffic classific
 - pkts_sent, pkts_received  
 
 ### 🎯 Target Variable
-- **Action** (`ALLOW` or `DENY`)
+- **Action** (`ALLOW` or `DENY` or 'Drop')
 
 ---
 

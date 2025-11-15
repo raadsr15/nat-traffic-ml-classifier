@@ -13,18 +13,32 @@ This dataset is designed for analyzing and modeling network security decisions i
 
 The dataset provides a structured foundation for research in **traffic classification, firewall policy automation, anomaly detection**, and **AI-driven cybersecurity**, making it suitable for developing and benchmarking intelligent network security models.
 
-### 🔌 Port-Level Fields
-- Source Port  
-- Destination Port  
-- NAT Source Port  
-- NAT Destination Port  
+### 📥 Input Features
 
-### 📊 Numerical Traffic Metrics
-- Bytes, Bytes Sent, Bytes Received  
-- Packets  
-- Elapsed Time (sec)  
-- pkts_sent, pkts_received  
+All available fields in the NAT/firewall dataset are used as input to train the classification model. These features capture connection behavior, NAT translation patterns, and traffic flow characteristics, enabling the system to learn how underlying network attributes influence the final firewall action.
 
+- **Port-Level Parameters**:
+  - `Source Port`, `Destination Port`, `NAT Source Port`, `NAT Destination Port`
+  - Raw port values are transformed into binary indicators reflecting NAT translation consistency.
+
+- **Engineered NAT Behavior Features**:
+  - `Source_Port_NAT_Match` — 1 if the source port remains unchanged after NAT translation
+  - `Destination_Port_NAT_Match` — 1 if the destination port is preserved post-NAT
+  - These features help the model understand how translation patterns impact decision outcomes.
+
+- **Traffic Volume Metrics**:
+  - `Bytes`, `Bytes Sent`, `Bytes Received`
+  - Represent total data transferred during the flow.
+
+- **Packet-Level Statistics**:
+  - `Packets`, `pkts_sent`, `pkts_received`
+  - Capture packet activity and flow density.
+
+- **Temporal Features**:
+  - `Elapsed Time (sec)`
+  - Indicates connection duration and contributes to behavioral flow profiling.
+
+These combined inputs provide a detailed representation of network flow behavior, helping the model classify firewall actions more accurately and interpret patterns in NAT translation.
 ### 🎯 Target Variable
 - **Action** (`ALLOW` or `DENY` or 'Drop')
 

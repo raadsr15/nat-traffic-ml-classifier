@@ -6,7 +6,12 @@ This project provides a complete machine learning pipeline for analyzing and cla
 
 ## 📦 Dataset Description
 
-This project uses `log2.csv`, a structured NAT/firewall log containing:
+This repository uses the **Internet Firewall Log Dataset (log2.csv)** from the UCI Machine Learning Repository, available here:  
+👉 https://archive.ics.uci.edu/ml/datasets/Internet+Firewall+Data  
+
+This dataset is designed for analyzing and modeling network security decisions in real-world firewall environments. It contains **65,532 traffic flow records** captured from a university firewall system and includes detailed **connection metadata, NAT translation fields, packet statistics**, and the corresponding **firewall action** applied to each flow.
+
+The dataset provides a structured foundation for research in **traffic classification, firewall policy automation, anomaly detection**, and **AI-driven cybersecurity**, making it suitable for developing and benchmarking intelligent network security models.
 
 ### 🔌 Port-Level Fields
 - Source Port  

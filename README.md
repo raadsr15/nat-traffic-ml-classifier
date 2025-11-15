@@ -40,7 +40,7 @@ All available fields in the NAT/firewall dataset are used as input to train the 
 
 These combined inputs provide a detailed representation of network flow behavior, helping the model classify firewall actions more accurately and interpret patterns in NAT translation.
 ### 🎯 Target Variable
-- **Action** (`ALLOW` or `DENY` or 'Drop')
+- **Action** (`ALLOW` or `DENY` or 'DROP')
 
 ---
 

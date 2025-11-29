@@ -125,5 +125,5 @@ Extra Trees and Random Forest were the most consistent performers.
 
 ### 1. Clone the Repository
 ```bash
-git clone https://github.com/<your-username>/<repo-name>.git
+git clone https://github.com/raadsr15/nat-traffic-ml-classifier.git
 cd <repo-name>

@@ -1,3 +1,7 @@
+
+![Lucid_Origin_Create_a_modern_cybersecurity_background_image_Da_0](https://github.com/user-attachments/assets/2398504e-673d-4df2-b52a-5f213f7a8031)
+
+
 # NAT Traffic Classification with Machine Learning
 
 This project provides a complete machine learning pipeline for analyzing and classifying firewall and NAT (Network Address Translation) traffic logs. The goal is to predict whether a network action (e.g., `ALLOW` or `DENY`) occurs based on packet-level metrics, port activity, and NAT translation behavior. The repository includes exploratory visualization, feature engineering, model training, evaluation, and feature importance analysis using multiple classical ML models. It is designed for students, researchers, cybersecurity analysts, and network engineers working on traffic classification or NAT behavior modeling.

@@ -147,8 +147,7 @@ Extra Trees and Random Forest were the most consistent performers.
 - AdaBoost exhibited the weakest stability due to high variance and poor recall on the minority class.
 - Elapsed Time (sec) consistently ranked as a top feature for multiple ensemble models.
 - Destination_Port_NAT_Match was the dominant feature for Extra Trees, highlighting the importance of NAT translation behavior.
-- The largest misclassification trend occurred between Class 2 and Class 1, suggesting overlapping flow characteristics.
-- Extremely low support for Class 3 led to unstable recall across all models.
+- The largest misclassification trend occurred between drop and deny, suggesting overlapping flow characteristics.
 - NAT behavior, flow duration, and traffic volume emerged as the three strongest categories of predictive signals.
 
 ---
@@ -158,4 +157,4 @@ Extra Trees and Random Forest were the most consistent performers.
 ### 1. Clone the Repository
 ```bash
 git clone https://github.com/raadsr15/nat-traffic-ml-classifier.git
-cd <repo-name>
+cd nat-traffic-ml-classifier

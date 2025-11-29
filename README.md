@@ -121,6 +121,38 @@ Extra Trees and Random Forest were the most consistent performers.
 
 ---
 
+## 📈 Results
+
+| Model | Test Accuracy | CV Mean ± SD | Macro F1 Score | Class 3 Recall | Top Features |
+|-------|--------------:|--------------:|---------------:|---------------:|--------------|
+| Extra Trees | 93.52% | 93.30% ± 0.20% | 0.84 | 0.50 | Destination_Port_NAT_Match, Bytes Sent, Bytes |
+| Random Forest | 93.52% | 93.30% ± 0.20% | 0.84 | 0.50 | Elapsed Time (sec), Destination_Port_NAT_Match, Bytes |
+| LightGBM | 93.51% | 93.29% ± 0.20% | 0.84 | 0.50 | Bytes, Bytes Sent, Elapsed Time (sec) |
+| Gradient Boosting | 93.51% | 93.29% ± 0.20% | 0.74 | 0.17 | Elapsed Time (sec), Bytes, Bytes Sent |
+| KNN | 93.49% | 93.05% ± 0.29% | 0.84 | 0.50 | N/A |
+| XGBoost | 93.39% | 93.19% ± 0.21% | 0.83 | 0.50 | Elapsed Time (sec), Bytes, Packets |
+| Decision Tree | 93.52% | 93.29% ± 0.20% | 0.84 | 0.50 | Elapsed Time (sec), Bytes, Bytes Sent |
+| AdaBoost | 92.31% | 87.43% ± 5.93% | 0.66 | 0.00 | Bytes, Elapsed Time (sec), Bytes Sent |
+
+> 📌 Extra Trees, Random Forest, and LightGBM delivered the strongest and most consistent performance across all evaluation metrics.
+
+> 📊 Elapsed Time (sec), NAT translation consistency, and byte-volume features were the most influential predictors across most models.
+
+---
+
+## 🔍 Key Findings
+
+- Extra Trees and Random Forest achieved the highest overall stability and accuracy.
+- LightGBM showed strong performance with byte-level features contributing the most to its predictions.
+- AdaBoost exhibited the weakest stability due to high variance and poor recall on the minority class.
+- Elapsed Time (sec) consistently ranked as a top feature for multiple ensemble models.
+- Destination_Port_NAT_Match was the dominant feature for Extra Trees, highlighting the importance of NAT translation behavior.
+- The largest misclassification trend occurred between Class 2 and Class 1, suggesting overlapping flow characteristics.
+- Extremely low support for Class 3 led to unstable recall across all models.
+- NAT behavior, flow duration, and traffic volume emerged as the three strongest categories of predictive signals.
+
+---
+
 ## ⚙️ Installation & Usage
 
 ### 1. Clone the Repository
